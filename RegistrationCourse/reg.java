@@ -288,7 +288,7 @@ public class reg extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTable1MouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) { //update the records
       DefaultTableModel Df = (DefaultTableModel)jTable1.getModel();
       int selectedIndex = jTable1.getSelectedRow();
         
@@ -325,16 +325,16 @@ public class reg extends javax.swing.JFrame {
         }   
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//Delete the record;
          DefaultTableModel Df = (DefaultTableModel)jTable1.getModel();
          int selectedIndex = jTable1.getSelectedRow();
-//here
-            try {
-           int id = Integer.parseInt(Df.getValueAt(selectedIndex, 0).toString());
+        
+           try {
+            int id = Integer.parseInt(Df.getValueAt(selectedIndex, 0).toString());
+   
+            int dialogueResult = JOptionPane.showConfirmDialog(null,"Do you want to delete the Record?","Warning", JOptionPane.YES_NO_OPTION);
            
-           int dialogueResult = JOptionPane.showConfirmDialog(null,"Do you want to delete the Record?","Warning", JOptionPane.YES_NO_OPTION);
-           
-           if(dialogueResult == JOptionPane.YES_OPTION){
+            if(dialogueResult == JOptionPane.YES_OPTION){
             
             Class.forName("com.mysql.jdbc.Driver");
             con1 = DriverManager.getConnection("jdbc:mysql://localhost/mya","root","root");
