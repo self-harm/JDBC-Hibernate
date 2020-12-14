@@ -240,8 +240,6 @@ public class reg extends javax.swing.JFrame {
             } 
         }
         
-        
-        
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String name = txtName.getText();
         String mobile = txtMobile.getText();
@@ -356,10 +354,7 @@ public class reg extends javax.swing.JFrame {
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(reg.class.getName()).log(Level.SEVERE, null, ex);
         }   
-
-
-        
-        
+ 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
