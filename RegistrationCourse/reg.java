@@ -149,7 +149,6 @@ public class reg extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
             },
             new String [] {
                 "Id", "Name", "Mobile", "Course"
@@ -230,11 +229,8 @@ public class reg extends javax.swing.JFrame {
                     v2.add(rs.getString("mobile"));
                     v2.add(rs.getString("course"));
                 }
-                
                 Df.addRow(v2);
             }
-           
-            
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(reg.class.getName()).log(Level.SEVERE, null, ex);
             } 
