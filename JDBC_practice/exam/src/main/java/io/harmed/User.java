@@ -16,6 +16,9 @@ public class User {
         this.id = id;
     }
 
+    public User() {
+    }
+
     public String getName() {
         return name;
     }
@@ -38,5 +41,14 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

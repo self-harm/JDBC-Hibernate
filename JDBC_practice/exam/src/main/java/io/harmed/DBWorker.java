@@ -14,10 +14,16 @@ public class DBWorker {
 
     public DBWorker() {
         try{
-            Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Произошла ошибка при подключении к БД!");
         }
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
 }
+
+
