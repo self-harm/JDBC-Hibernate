@@ -21,6 +21,11 @@ public class DBWorker {
         }
     }
 
+    public void execute(){
+    }
+
+    
+
     public Connection getConnection() {
         return connection;
     }

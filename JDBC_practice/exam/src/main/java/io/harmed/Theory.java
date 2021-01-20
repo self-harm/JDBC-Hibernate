@@ -2,6 +2,8 @@ package io.harmed;
 
 import java.sql.*;
 
+/**db connection/statement/execute() methods*/
+
 public class Theory {
     /*необходимо указать Timezone, иначе выдаст ошибку
     * ?key=value&key=value
