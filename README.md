@@ -1,11 +1,10 @@
 # SQL-projects
 
-Practice of SQL based on Java.
+<H1> 1. Registation of course</H1> [click]
 
-<H1> 1. Registation of course</H1>
-[click](https://github.com/self-harm/SQL-projects/tree/main/RegistrationCourse) 
-<br>
 it has one simple table(id/name/mobile/course). We can add a participant, alter any data or delete it;
+<br>
+[click](https://github.com/self-harm/SQL-projects/tree/main/RegistrationCourse)
 
 ![alt text](https://github.com/self-harm/SQL-projects/blob/main/SQL.PNG?raw=true)
 
