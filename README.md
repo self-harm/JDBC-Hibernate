@@ -17,6 +17,9 @@ db connection/statement/execute() methods/preparedStatement
 
 
 [click](https://github.com/self-harm/SQL-projects/tree/main/JDBC_practice)
+
+getting data from DB and display it in the console using .toString();
+![alt-text](https://github.com/self-harm/SQL-projects/blob/main/1.PNG)
 <H1> 3. Practice/learning of Hibernate</H1>
 
 <H1> 4. Manga DB with GUI (particularly Swing)</H1>
