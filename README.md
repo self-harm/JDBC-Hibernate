@@ -12,3 +12,5 @@ it has one simple table(id/name/mobile/course). We can add a participant, alter 
 <H1> 2. Practice/learning of DJBC</H1>
 
 <H1> 3. Practice/learning of Hibernate</H1>
+
+<H1> 5. Manga DB with GUI (particularly Swing)</H1>
