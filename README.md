@@ -8,12 +8,15 @@ it has one simple table(id/name/mobile/course). We can add a participant, alter 
 
 ![alt text](https://github.com/self-harm/SQL-projects/blob/main/SQL.PNG?raw=true)
 
+
+
+
 <H1> 2. Practice/learning of DJBC</H1>
 common theory:
 db connection/statement/execute() methods/preparedStatement
-<br>
 
 
+[click](https://github.com/self-harm/SQL-projects/tree/main/JDBC_practice)
 <H1> 3. Practice/learning of Hibernate</H1>
 
 <H1> 4. Manga DB with GUI (particularly Swing)</H1>
