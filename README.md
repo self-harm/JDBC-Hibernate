@@ -22,4 +22,8 @@ getting/saving data from DB in User class and display it in the console using .t
 ![alt-text](https://github.com/self-harm/SQL-projects/blob/main/1.PNG)
 <H1> 3. Practice/learning of Hibernate</H1>
 
+
+
+[click](https://github.com/self-harm/SQL-projects/tree/main/hibernate_practice)
+
 <H1> 4. Manga DB with GUI (particularly Swing)</H1>
