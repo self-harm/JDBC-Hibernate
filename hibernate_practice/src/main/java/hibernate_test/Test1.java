@@ -5,6 +5,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+/**занесение в БД объект, используя класс-entity
+ * 1. создать session
+ * 2. начать транзакцию, использую сессию
+ * 3. сохранить
+ * 4. закрыть транзакцию
+ * 5. закрыть factory
+ * */
 public class Test1 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
@@ -25,6 +32,7 @@ public class Test1 {
             session.beginTransaction();
             session.save(emp);
             session.getTransaction().commit();
+            System.out.println(emp);
         }
         finally {
             factory.close();

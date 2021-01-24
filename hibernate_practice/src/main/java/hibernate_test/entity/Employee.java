@@ -1,7 +1,5 @@
 package hibernate_test.entity;
 
-import sun.util.resources.Bundles;
-
 import javax.persistence.*;
 
 @Entity
