@@ -20,10 +20,10 @@ public class Test1 {
                 .buildSessionFactory();
 
         /*Session - это обертка вокруг подключения к базе с помощью JDBC
-        * Session мы получаем с помощью SessionFactory
-        *
-        * Session - это основа для работы с БД. Именно с ней мы будем добавлять, получать
-        *  и делать другие операции с Java объектами в БД*/
+         * Session мы получаем с помощью SessionFactory
+         *
+         * Session - это основа для работы с БД. Именно с ней мы будем добавлять, получать
+         *  и делать другие операции с Java объектами в БД*/
 
         try{
             Session session = factory.getCurrentSession();

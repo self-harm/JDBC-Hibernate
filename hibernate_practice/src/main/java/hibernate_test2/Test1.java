@@ -1,38 +1,62 @@
 package hibernate_test2;
 
-import hibernate_test.entity.Employee;
+import hibernate_test2.entity.Detail;
+import hibernate_test2.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-/**занесение в БД объект, используя класс-entity
- * 1. создать session
- * 2. начать транзакцию, использую сессию
- * 3. сохранить
- * 4. закрыть транзакцию
- * 5. закрыть factory
- * */
+/**one-to-one
+ * uni-directional relation*/
 public class Test1 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
+                .addAnnotatedClass(Detail.class)
                 .buildSessionFactory();
 
-        /*Session - это обертка вокруг подключения к базе с помощью JDBC
-        * Session мы получаем с помощью SessionFactory
-        *
-        * Session - это основа для работы с БД. Именно с ней мы будем добавлять, получать
-        *  и делать другие операции с Java объектами в БД*/
-
         try{
-            Session session = factory.getCurrentSession();
-            Employee emp = new Employee("Kseniia", "Lebedeva", "IT", 9500);
+            /**занесение рабоников/деталей в таблицу*/
+            /*Session session = factory.getCurrentSession();
+
+
+            Employee employee = new Employee("Kseniia", "Lebedeva", "IT", 10500);
+            Detail detail = new Detail("Vancouver", "9255480027", "lightgraywrite@gmail.com");
+            employee.setEmpDetail(detail);
+
+            Employee employee1 = new Employee("Oleg", "Smirnov", "Sales", 5200);
+            Detail detail1 = new Detail("Moscow", "464822", "olejka@gmail.com");
+            employee1.setEmpDetail(detail1);
 
             session.beginTransaction();
-            session.save(emp);
+            *//*достаточно просто сохранить employee, т.к. благодаря каскаду
+            * идет сохранение и details в соответствующей таблице*//*
+            session.save(employee);
             session.getTransaction().commit();
-            System.out.println(emp);
+            System.out.println("Done!");*/
+
+
+            /**получение работника по id*/
+            /*Session session = factory.getCurrentSession();
+            session.beginTransaction();
+
+            Employee emp = session.get(Employee.class, 2);
+            System.out.println(emp.getEmpDetail());
+
+            session.getTransaction().commit();
+            System.out.println("Done!");*/
+
+
+            /**удаление работника по id*/
+            Session session = factory.getCurrentSession();
+            session.beginTransaction();
+
+            Employee emp = session.get(Employee.class, 2);
+            session.delete(emp);
+
+            session.getTransaction().commit();
+            System.out.println("Done!");
         }
         finally {
             factory.close();
